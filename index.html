@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Automation</title>
+    <!-- Link to an external CSS stylesheet -->
+    <link rel="stylesheet" href="https://example.com/css/style.css" />
+    <style>
+      /* Reset default browser styles */
+      body,
+      button {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+      }
+
+      /* Container for buttons and audio player */
+      .container {
+        text-align: center;
+        padding: 20px;
+      }
+
+      /* Style the buttons */
+      button {
+        background-color: #007bff;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+        margin-right: 10px;
+      }
+
+      /* Style the audio player */
+      #audioPlayer {
+        display: none;
+      }
+
+      /* Style the custom audio controls */
+      .audio-controls {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px;
+      }
+
+      .play-pause-button,
+      .stop-button {
+        background-color: #007bff;
+        color: white;
+        border: none;
+        padding: 10px 15px;
+        cursor: pointer;
+        margin-right: 10px;
+      }
+
+      /* Style the audio progress bar */
+      .audio-progress {
+        width: 100%;
+        height: 10px;
+        background-color: #ccc;
+        margin-top: 10px;
+      }
+
+      .audio-progress-bar {
+        height: 100%;
+        width: 0;
+        background-color: #007bff;
+        transition: width 0.2s ease-in-out;
+      }
+    </style>
+    <!-- Include Howler.js library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.3.4/howler.min.js"></script>
+  </head>
+  <body>
+    <button id="textToSpeechButton">Routine</button>
+    <button id="displayImageButton">Teacher's Day</button>
+    <button id="playMusicButton">Music</button>
+    <audio id="musicPlayer" controls>
+      <source
+        src="/Pufino - Enlivening (freetouse.com).mp3"
+        type="audio/mpeg"
+      />
+      Your browser does not support the audio element.
+    </audio>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/speechSynthesis/2.0.0/speechSynthesis.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
